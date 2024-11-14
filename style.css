@@ -359,3 +359,37 @@ button:hover {
   footer p {
     margin: 1px 0;
   }
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgb(57 119 94);
+        width: 100%;
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
